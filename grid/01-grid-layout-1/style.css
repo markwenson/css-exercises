@@ -1,6 +1,9 @@
 body, html {
-  height: 100%;
+  height: 95%;
   margin: 0;
+  
+  display: flex;
+  justify-content: center;
 }
 
 .container {
@@ -8,6 +11,20 @@ body, html {
   height: 100%;
   padding: 16px;
   box-sizing: border-box;
+  display: grid;
+  grid-template: 80px 80px 80px 80px 80px 80px 80px 80px / 
+  150px 150px 150px 150px 150px 150px;
+  grid-template-areas: 
+    "header header header header header header"
+    "sidebar sidebar nav nav nav nav"
+    "sidebar sidebar article article article article"
+    "sidebar sidebar article article article article"
+    "sidebar sidebar article article article article"
+    "sidebar sidebar article article article article"
+    "sidebar sidebar article article article article"
+    "footer footer footer footer footer footer";
+  row-gap: 15px;
+  column-gap: 15px;
 }
 
 .container div {
@@ -20,28 +37,33 @@ body, html {
 }
 
 .header {
+  grid-area: header;
   background-color: #FFDE22;
 }
 
 .sidebar {
+  grid-area: sidebar;
   background-color: #FF7755;
 }
 
 .nav {
+  grid-area: nav;
   background-color: #00DDFF;
 }
 
 .article {
+  grid-area: article;
   background-color: #bccbde;
 }
 
 .article p {
-  font-size: 18px;
+  font-size: 0.9rem;
   font-family: sans-serif;
   color: white;
   text-align: left;
 }
 
 .footer {
+  grid-area: footer;
   background-color: #393f4d;
 }
